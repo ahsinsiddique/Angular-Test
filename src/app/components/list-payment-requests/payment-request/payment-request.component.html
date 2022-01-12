@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-body"  style="border-left:5px solid {{paymentRequest.color}}">
+    <div fxFlex="100">
+      <div fxFlex="40">
+        <h5 class="card-title"><b>{{paymentRequest.name}} - {{"  " + paymentRequest.payment }}</b></h5>
+        <p
+          class="card-text">{{paymentRequest.id + "  .  " + paymentRequest.date + "  .  " + paymentRequest.description }}</p>
+      </div>
+      <div fxFlex="20">
+        {{paymentRequest.dueDate}}
+      </div>
+
+      <div fxFlex="30">
+
+        <div ngbDropdown class="d-inline-block status-field">
+          <input id="dropdown" ngbDropdownToggle type="text" value="{{paymentRequest.status}}">
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>Draft</button>
+            <button ngbDropdownItem>Submitted</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div fxFlex class="card-list-icon">
+        <i class="fa fa-ellipsis-v"></i>
+      </div>
+    </div>
+  </div>
