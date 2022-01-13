@@ -23,6 +23,10 @@ export class PaymentComponent implements OnInit, OnDestroy {
       })
   }
 
+  onPaymentMethodClick(paymentRequest: PaymentRequest) {
+    console.log(paymentRequest);
+  }
+
   ngOnDestroy() {
   }
 

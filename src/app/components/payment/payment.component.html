@@ -20,7 +20,8 @@
       <ng-template ngbNavContent>
    <!-- ================               body ===================================       -->
 
-        <app-list-payment-requests [paymentRequests]="paymentRequests"></app-list-payment-requests>
+        <app-list-payment-requests [paymentRequests]="paymentRequests"
+                                   (onPaymentRequestSelection)="onPaymentMethodClick($event)"></app-list-payment-requests>
 
       </ng-template>
     </li>

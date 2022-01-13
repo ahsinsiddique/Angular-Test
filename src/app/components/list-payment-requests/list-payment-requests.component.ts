@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {PaymentRequest} from "../../shared/models/PaymentRequest";
 
 @Component({
@@ -8,8 +8,14 @@ import {PaymentRequest} from "../../shared/models/PaymentRequest";
 })
 export class ListPaymentRequestsComponent implements OnInit {
   @Input() paymentRequests: PaymentRequest[]
+  @Output() onPaymentRequestSelection = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+  }
+
+  onPaymentRequestClick(paymentRequest: PaymentRequest) {
+    this.onPaymentRequestSelection.emit(paymentRequest);
+  }
 
   ngOnInit(): void {
   }
