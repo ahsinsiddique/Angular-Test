@@ -13,13 +13,15 @@
       <div fxFlex="30">
 
         <div ngbDropdown class="d-inline-block status-field">
+          <i style="color: {{paymentRequest.color}}" class="fa fa-circle dropdown-circle-icon"></i>
           <input id="dropdown" ngbDropdownToggle type="text" value="{{paymentRequest.status}}">
           <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
             <button ngbDropdownItem>Draft</button>
             <button ngbDropdownItem>Submitted</button>
           </div>
-
+          <i class="fa fa-chevron-down dropdown-input-icon" ></i>
         </div>
+
       </div>
 
       <div fxFlex class="card-list-icon">
